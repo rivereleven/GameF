@@ -143,7 +143,8 @@ var Singleton = cc.Class({
     marketContent: cc.Node,
     storageContent: cc.Node,
     buyAlert: cc.Node,
-    sellAlert: cc.Node
+    sellAlert: cc.Node,
+    game:cc.Node
   },
 
   // LIFE-CYCLE CALLBACKS:
@@ -174,18 +175,8 @@ var Singleton = cc.Class({
     } catch (error) {
       console.log(error);
     }
-
-    this.init();
-
-    let self = this
-
-    this.schedule(function(){
-      let content = self.marketContent.children
-      for(let i = 0, len = content.length; i < length; i++){
-        content[i].destroy()
-      }
-      self.init()
-    }, 3);
+    
+    this.init()
 
   },
   //初始化数据
@@ -210,26 +201,26 @@ var Singleton = cc.Class({
     this.achivementLabel.string = this.achivementValue;
     this.cashLabel.string = this.cashValue;
     this.totalMoneyLabel.string = this.totalMoney;
-    this.monthLabel.string = this.monthValue + "月";
+    // this.monthLabel.string = this.monthValue + "月";
     this.ageLabel.string = this.ageValue + "/70";
 
     // 时间自动加
 
-    this.monthLabel.schedule(function() {
-      if (self.monthValue < 600) {
-        self.monthValue += 1;
-        Singleton.getInstance().monthValue = self.monthValue
-        self.monthLabel.string = self.monthValue + "月";
-      }
-    }, 0.5);
+    // this.monthLabel.schedule(function() {
+    //   if (self.monthValue < 600) {
+    //     self.monthValue += 1;
+    //     Singleton.getInstance().monthValue = self.monthValue
+    //     self.monthLabel.string = self.monthValue + "月";
+    //   }
+    // }, 0.5);
 
-    this.ageLabel.schedule(function() {
-      if (self.ageValue < 70) {
-        self.ageValue += 1;
-        Singleton.getInstance().ageValue = self.ageValue
-        self.ageLabel.string = self.ageValue + "/70";
-      }
-    }, 6);
+    // this.ageLabel.schedule(function() {
+    //   if (self.ageValue < 70) {
+    //     self.ageValue += 1;
+    //     Singleton.getInstance().ageValue = self.ageValue
+    //     self.ageLabel.string = self.ageValue + "/70";
+    //   }
+    // }, 6);
 
 
     //商品初始化
@@ -270,7 +261,7 @@ var Singleton = cc.Class({
       childrenNode[2].getComponent(cc.Label).string = goodsPrice
       Singleton.getInstance().goodsPrice[goodsName] = goodsPrice
       newNOde.parent = parent_node;
-      console.log(this.goodsPrice)
+      // console.log(this.goodsPrice)
     }
 
     return goodsResource
@@ -299,16 +290,10 @@ var Singleton = cc.Class({
     if (this.ageValue >= 70) {
       // 游戏结束
     }
-
     
 
     // 个人属性面板的更新
 
-    this.achivementLabel.string = Singleton.getInstance().achivementValue;
-    this.cashLabel.string = Singleton.getInstance().cashValue;
-    this.totalMoneyLabel.string = Singleton.getInstance().totalMoney;
-    this.monthLabel.string = Singleton.getInstance().monthValue + "月";
-    this.ageLabel.string = Singleton.getInstance().ageValue + "/70";
 
     //  市场商品面板的更新
 

@@ -40,7 +40,6 @@ cc.Class({
 
     start () {
         cc.log("start start")
-        cc.log(Singleton._instance.sys_tips)
     },
     onStartClick(){
         this.startUI.active = false
