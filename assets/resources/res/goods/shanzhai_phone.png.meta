@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "43b5849e-849a-4d4b-9694-6631fcf946ea",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "shanzhai_phone": {
+      "ver": "1.0.3",
+      "uuid": "ecb38676-e401-4898-9341-c5776455c1dc",
+      "rawTextureUuid": "43b5849e-849a-4d4b-9694-6631fcf946ea",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 31,
+      "trimY": 0,
+      "width": 66,
+      "height": 128,
+      "rawWidth": 128,
+      "rawHeight": 128,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

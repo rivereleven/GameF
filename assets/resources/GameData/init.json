@@ -1,0 +1,23 @@
+{
+    "player_value":{
+        "cash":20000,
+        "total_money":20000,
+        "month":0,
+        "age":20,
+        "health_val":100
+    },
+    "goods_value":{
+        "price":{
+            "bitcoin":2000,
+            "white_wine":2000,
+            "apple":50,
+            "imported_car":40000,
+            "domestic_car":10000,
+            "qiegao":40,
+            "geliening":2000,
+            "shanzhai_phone":1000,
+            "house":200000,
+            "xinpian":10000
+        }
+    }
+}
